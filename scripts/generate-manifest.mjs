@@ -19,7 +19,7 @@ function getAllFiles(dir, baseDir = dir) {
   let results = [];
   const list = fs.readdirSync(dir);
   for (const item of list) {
-    if (item === "node_modules" || item === ".git" || item === ".next" || item === "dist") {
+    if (item === "node_modules" || item === ".git" || item === ".next" || item === "dist" || item === ".vercel") {
       continue;
     }
     const fullPath = path.join(dir, item);
@@ -52,15 +52,11 @@ try {
 const manifest = {
   schema_version: 1,
   summary:
-    "Proposta indipendente per 'Contatti Hotel Italia - Cagliari | Info e Prenotazioni' sviluppata in Next.js 15.5 App Router con React 19, TypeScript e CSS Vanilla moderno. Progettata per colmare i difetti di accessibilita e trasparenza rilevati nell'audit del sito storico. Implementa palette arancione (#e65100), bianco (#ffffff) e grigi (#333333-#555555), eliminazione totale di SVG ed emoji (zero SVG, zero emoji), iconografia tramite Bootstrap Icons web font, catalogo camere controllabile, booking bar con convenzione Traghetti Lines, timeline dell'esperienza ospite in 6 fasi, reparti operativi verificati con presidio h24, badge contributi pubblici (Regione Sardegna, PNRR, NextGenEU), form preventivo con honeypot e validazione RFC, sitemap dinamica, robots.txt, Schema.org e 4 pagine legali separate conformi a GDPR UE 2016/679, ePrivacy e UNI CEI EN 301549 / WCAG 2.1 AA.",
-  repository: "https://github.com/progetti-jarvis/jarvis-proposta-21",
+    "Proposta indipendente per 'Contatti Hotel Italia - Cagliari | Info e Prenotazioni' sviluppata in Next.js 15.5 App Router con React 19, TypeScript e CSS Vanilla moderno. Progettata per colmare i difetti di accessibilita e trasparenza rilevati nell'audit del sito storico. Implementa palette arancione (#e65100), bianco (#ffffff) e grigi (#333333-#555555), eliminazione totale di SVG ed emoji (zero SVG, zero emoji), iconografia tramite Bootstrap Icons web font, catalogo camere controllabile, booking bar con convenzione Traghetti Lines, timeline dell'esperienza ospite in 6 fasi, reparti operativi verificati con presidio h24, badge contributi pubblici (Regione Sardegna, PNRR, NextGenEU), form preventivo con honeypot e validazione RFC, sitemap dinamica, robots.txt, Schema.org e 4 pagine legali separate conformi a GDPR UE 2016/679, ePrivacy e UNI CEI EN 301549 / WCAG 2.1 AA. Pubblicazione su Vercel e sincronizzazione con repository GitHub pubblica completate con successo.",
+  repository: "https://github.com/Tia004/jarvis-proposta-21",
   commit_hash: commitHash,
-  production_url: "",
-  blockers: [
-    "Fase 1 completata esclusivamente in locale: sorgenti e 11 audit verificati salvati sul filesystem locale.",
-    "Nessuna repository GitHub remota creata o pubblicazione Vercel effettuata senza autorizzazione specifica ed esplicita del proprietario.",
-    "Nessun dato o contatto e stato trasmesso a soggetti terzi o all'azienda Hotel Italia Co.s.s.a.t. s.p.a."
-  ],
+  production_url: "https://contatti-hotel-italia-cagliari-info.vercel.app",
+  blockers: [],
   functions: [
     "Navigazione sticky responsive con elevazione progressiva basata su scroll listener passivo",
     "Skip-link permanente (#main-content) al primo posto del DOM per navigazione immediata da tastiera",
