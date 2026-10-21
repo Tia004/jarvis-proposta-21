@@ -1,0 +1,234 @@
+.footer {
+  background-color: var(--color-gray-dark);
+  color: #d1cfcc;
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-xl);
+  border-top: 3px solid var(--color-primary);
+  font-size: var(--text-xs);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1.4fr 1.1fr 1fr 1.3fr;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.monogram {
+  width: 38px;
+  height: 38px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.brandTitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--color-white);
+  margin: 0;
+}
+
+.brandBadge {
+  font-size: 0.7rem;
+  color: #ffb74d;
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.brandBio {
+  color: #b5b3af;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.socialNotice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 0.65rem;
+  border-radius: 4px;
+  border-left: 2px solid #ffb74d;
+  font-size: 0.72rem;
+  color: #b5b3af;
+}
+
+.socialNotice i {
+  color: #ffb74d;
+  margin-top: 0.1rem;
+}
+
+.colTitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-white);
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.colTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+.contactList, .linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.contactList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  line-height: 1.45;
+}
+
+.contactList i {
+  color: var(--color-primary);
+  margin-top: 0.2rem;
+}
+
+.contactList a, .linksList a {
+  color: #d1cfcc;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contactList a:hover, .linksList a:hover {
+  color: #ffb74d;
+}
+
+.legalBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  line-height: 1.45;
+  margin-bottom: 0.85rem;
+}
+
+.legalBox strong {
+  color: var(--color-white);
+  font-size: 0.85rem;
+}
+
+.grantsBox {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  border-radius: 4px;
+  line-height: 1.4;
+  color: #a8a6a2;
+}
+
+.grantsBox strong {
+  color: #ffb74d;
+}
+
+/* Legal Bar Bottom */
+.legalBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: var(--space-xl);
+}
+
+.legalLinksGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.legalPageLink {
+  color: var(--color-white);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color var(--transition-fast);
+}
+
+.legalPageLink:hover {
+  color: #ffb74d;
+  text-decoration: underline;
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.disclaimerBox {
+  background-color: rgba(230, 81, 0, 0.12);
+  border: 1px solid rgba(230, 81, 0, 0.3);
+  border-radius: 4px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.disclaimerText {
+  color: #ffcc80;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.75rem;
+}
+
+.disclaimerText strong {
+  color: var(--color-white);
+}
+
+.copyrightRow {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: #8f8d89;
+  font-size: 0.72rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.85rem;
+}

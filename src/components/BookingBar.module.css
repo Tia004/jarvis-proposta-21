@@ -1,0 +1,188 @@
+.bookingSection {
+  margin-top: -3.5rem;
+  position: relative;
+  z-index: 10;
+  padding-bottom: var(--space-2xl);
+}
+
+.bookingCard {
+  background-color: var(--color-white);
+  border-radius: 6px;
+  border: 1px solid var(--color-gray-border);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-xl);
+}
+
+.cardHeader {
+  margin-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-gray-light);
+  padding-bottom: var(--space-sm);
+}
+
+.headerTitleWrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 0.35rem;
+}
+
+.headerTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+}
+
+.headerTitle {
+  font-size: var(--text-xl);
+  color: var(--color-gray-dark);
+  margin: 0;
+}
+
+.headerDescription {
+  font-size: var(--text-sm);
+  color: var(--color-gray-muted);
+  margin: 0;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+@media (min-width: 600px) {
+  .formGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .formGrid {
+    grid-template-columns: repeat(3, 1fr) repeat(3, 0.9fr) 1.2fr;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-gray-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.label i {
+  color: var(--color-primary);
+}
+
+.input, .select {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  padding: 0.65rem 0.75rem;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-gray-border);
+  border-radius: 4px;
+  color: var(--color-gray-dark);
+  transition: all var(--transition-fast);
+}
+
+.input:focus, .select:focus {
+  border-color: var(--color-primary);
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 2px var(--color-primary-soft);
+}
+
+.btnWrapper {
+  display: flex;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 0.7rem 1rem;
+}
+
+/* Dynamic Result Box */
+.resultBox {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  border-radius: 4px;
+  background-color: var(--color-primary-soft);
+  border: 1px solid rgba(230, 81, 0, 0.2);
+  animation: fadeIn 300ms ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.resultHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.resultHeader i {
+  color: var(--color-primary-dark);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.resultHeader strong {
+  display: block;
+  font-size: var(--text-base);
+  color: var(--color-gray-dark);
+}
+
+.resultHeader p {
+  font-size: var(--text-xs);
+  color: var(--color-gray-muted);
+  margin: 0.15rem 0 0 0;
+}
+
+.discountBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary-dark);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.resultActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.demoDisclaimer {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-gray-muted);
+  font-style: italic;
+  line-height: 1.4;
+}

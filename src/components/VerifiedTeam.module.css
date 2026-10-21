@@ -1,0 +1,194 @@
+.teamSection {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-canvas);
+  border-top: 1px solid var(--color-gray-border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  margin-bottom: var(--space-2xl);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.deptCard {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-border);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.deptCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background-color: var(--color-surface-dim);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.hoursBadge {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  background-color: rgba(35, 35, 35, 0.88);
+  color: var(--color-white);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.55rem;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  backdrop-filter: blur(4px);
+}
+
+.cardBody {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.deptName {
+  font-size: 1.15rem;
+  color: var(--color-gray-dark);
+  margin-bottom: 0.2rem;
+}
+
+.deptRole {
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.deptDesc {
+  font-size: var(--text-xs);
+  color: var(--color-gray-muted);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+
+.capabilitiesBlock {
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.capTitle {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--color-gray-dark);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+}
+
+.capList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.capList li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--color-gray-muted);
+}
+
+.capList i {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.contactRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--color-gray-light);
+}
+
+.mailLink, .phoneLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--color-gray-dark);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.mailLink i, .phoneLink i {
+  color: var(--color-primary);
+}
+
+.mailLink:hover, .phoneLink:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Transparency Note */
+.transparencyNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-border);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 4px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.noteIcon {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.noteContent strong {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-gray-dark);
+  margin-bottom: 0.25rem;
+}
+
+.noteContent p {
+  font-size: var(--text-xs);
+  color: var(--color-gray-muted);
+  line-height: 1.5;
+  margin: 0;
+}
