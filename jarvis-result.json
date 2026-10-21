@@ -2,7 +2,7 @@
   "schema_version": 1,
   "summary": "Proposta indipendente per 'Contatti Hotel Italia - Cagliari | Info e Prenotazioni' sviluppata in Next.js 15.5 App Router con React 19, TypeScript e CSS Vanilla moderno. Progettata per colmare i difetti di accessibilita e trasparenza rilevati nell'audit del sito storico. Implementa palette arancione (#e65100), bianco (#ffffff) e grigi (#333333-#555555), eliminazione totale di SVG ed emoji (zero SVG, zero emoji), iconografia tramite Bootstrap Icons web font, catalogo camere controllabile, booking bar con convenzione Traghetti Lines, timeline dell'esperienza ospite in 6 fasi, reparti operativi verificati con presidio h24, badge contributi pubblici (Regione Sardegna, PNRR, NextGenEU), form preventivo con honeypot e validazione RFC, sitemap dinamica, robots.txt, Schema.org e 4 pagine legali separate conformi a GDPR UE 2016/679, ePrivacy e UNI CEI EN 301549 / WCAG 2.1 AA.",
   "repository": "https://github.com/progetti-jarvis/jarvis-proposta-21",
-  "commit_hash": "f5849ad0e2c20b9684d25ba3c704891686e8d290",
+  "commit_hash": "c974de9c4eab4072f5cfbc66076b36b386b17222",
   "production_url": "",
   "blockers": [
     "Fase 1 completata esclusivamente in locale: sorgenti e 11 audit verificati salvati sul filesystem locale.",
