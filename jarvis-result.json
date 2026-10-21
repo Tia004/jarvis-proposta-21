@@ -1,0 +1,506 @@
+{
+  "schema_version": 1,
+  "summary": "Proposta indipendente per 'Contatti Hotel Italia - Cagliari | Info e Prenotazioni' sviluppata in Next.js 15.5 App Router con React 19, TypeScript e CSS Vanilla moderno. Progettata per colmare i difetti di accessibilita e trasparenza rilevati nell'audit del sito storico. Implementa palette arancione (#e65100), bianco (#ffffff) e grigi (#333333-#555555), eliminazione totale di SVG ed emoji (zero SVG, zero emoji), iconografia tramite Bootstrap Icons web font, catalogo camere controllabile, booking bar con convenzione Traghetti Lines, timeline dell'esperienza ospite in 6 fasi, reparti operativi verificati con presidio h24, badge contributi pubblici (Regione Sardegna, PNRR, NextGenEU), form preventivo con honeypot e validazione RFC, sitemap dinamica, robots.txt, Schema.org e 4 pagine legali separate conformi a GDPR UE 2016/679, ePrivacy e UNI CEI EN 301549 / WCAG 2.1 AA.",
+  "repository": "https://github.com/progetti-jarvis/jarvis-proposta-21",
+  "commit_hash": "787dba37ca500467155e2177cfd2161fd95aa2c5",
+  "production_url": "",
+  "blockers": [
+    "Fase 1 completata esclusivamente in locale: sorgenti e 11 audit verificati salvati sul filesystem locale.",
+    "Nessuna repository GitHub remota creata o pubblicazione Vercel effettuata senza autorizzazione specifica ed esplicita del proprietario.",
+    "Nessun dato o contatto e stato trasmesso a soggetti terzi o all'azienda Hotel Italia Co.s.s.a.t. s.p.a."
+  ],
+  "functions": [
+    "Navigazione sticky responsive con elevazione progressiva basata su scroll listener passivo",
+    "Skip-link permanente (#main-content) al primo posto del DOM per navigazione immediata da tastiera",
+    "Drawer menu mobile accessibile con blocco scroll body, focus trap ciclico e chiusura su Escape",
+    "Chiusura automatica del menu mobile e scorrimento fluido al clic su qualsiasi ancora di sezione",
+    "Banner fisso di trasparenza 'Proposta dimostrativa non ufficiale' per conformita deontologica",
+    "Booking bar interattiva con calcolo dinamico delle notti di soggiorno e stima preventivo",
+    "Gestione codici promozionali convenzionati (TRAGHETTI -15%, DIRETTO -10%) con applicazione automatica",
+    "Catalogo camere filtrabile in tempo reale per tipologia (Tutte, Singole, Doppie, Familiari, Suite)",
+    "Slider fotografico camere controllabile con pulsanti prev/next, dot indicator e autoplay pausabile",
+    "Scorciatoie da tastiera integrate nello slider (frecce orizzontali e barra spaziatrice per play/pause)",
+    "Modale quick-view di dettaglio camera con focus-trap, lock dello scroll e chiusura su tasto Escape",
+    "Interruttore visualizzazione catalogo per passare istantaneamente tra modalita Slider e Griglia completa",
+    "Gestione avanzata dello stato vuoto (Empty State) con ripristino istantaneo di tutti i filtri",
+    "Timeline interattiva dell'esperienza ospite articolata in 6 tappe cronologiche con evidenza delle eccellenze",
+    "Tabella distanze strategiche (porto, stazione, aeroporto, Poetto) filtrabile per modalita di trasporto",
+    "Schede reparti operativi verificati (Reception H24, Booking, Housekeeping, Direzione) con orari e canali",
+    "Carosello partner istituzionali e contributi pubblici (Fondo Resisto, PNRR 4.2.5, UE) con tasto Pausa",
+    "Modulo richiesta preventivo con validazione sintattica RFC email, controllo date e stato obbligatori",
+    "Protezione anti-spam honeypot integrata e trasparente per respingere bot automatici senza CAPTCHA",
+    "Simulazione asincrona dell'invio messaggio con feedback visivo e chiara avvertenza dimostrativa",
+    "Accordion FAQ accessibile con commutazione semantica dello stato aria-expanded",
+    "Finestra di dialogo dedicata all'accessibilita digitale richiamabile tramite floating badge permanente",
+    "Banner consenso cookie conforme a GDPR e direttiva ePrivacy con memorizzazione in localStorage",
+    "Generazione dinamica sitemap.xml con prioritizzazione delle route e frequenza di scansione",
+    "Generazione dinamica robots.txt conforme agli standard di indicizzazione dei motori di ricerca",
+    "Dati strutturati Schema.org (JSON-LD) tipizzati per Hotel e LodgingBusiness con geo-coordinate della Marina"
+  ],
+  "design": [
+    "Palette cromatica istituzionale: Arancione (#e65100), Bianco puro (#ffffff) e Grigi calibrati (#333333-#555555)",
+    "Rapporto di contrasto testo/sfondo superiore a 12.6:1 per il corpo e 5.2:1 per gli accenti (supera WCAG AAA/AA)",
+    "Regola Zero SVG: assenza assoluta di elementi SVG inline per garantire massima stabilita e accessibilita",
+    "Regola Zero Emoji: eliminazione totale di emoji Unicode per mantenere un tono editoriale e professionale",
+    "Iconografia tipografica uniforme e ultraleggera implementata tramite Bootstrap Icons web font (WOFF2)",
+    "Tipografia fluida responsive basata su clamp() per un ridimensionamento armonioso dei titoli senza scatti",
+    "Sistema a griglia relazionale scalabile da smartphone compatti (320px) fino a monitor 4K Ultra-Wide",
+    "Hero editoriale d'impatto con badge storici (fondazione 1928), avviso presidio H24 e visuale architettonica",
+    "Transizioni e micro-interazioni CSS fluide con curve cubic-bezier e durate controllate (150-250ms)",
+    "Supporto nativo della media query prefers-reduced-motion per utenti con sensibilita vestibolare",
+    "Indicatore di focus da tastiera ad alta visibilita (outline arancione 3px con offset) conforme a :focus-visible",
+    "Card delle camere con elevazione progressiva all'hover, specifiche metriche e dotazioni in evidenza",
+    "Sezione gastronomica dedicata alla prima colazione sarda con spotlight fotografico dei dolci tipici",
+    "Timeline con linea guida verticale continua e nodi numerati per la scansione visiva del percorso ospite",
+    "Schede team strutturate con silhouette grafiche raster eleganti e badge orari differenziati",
+    "Carosello partner sobrio e non invasivo per la presentazione dei finanziamenti PNRR e regionali",
+    "Formulari con etichette esplicite, campi con bordo ad alto contrasto e contatore caratteri reattivo",
+    "Footer istituzionale a 4 colonne con dati legali completi (Co.s.s.a.t. s.p.a., REA CA-67249, P.IVA, Cap. Soc.)",
+    "Layout dedicato per le pagine legali con card editoriale, indici per sezioni e tabelle riassuntive",
+    "Pagina 404 personalizzata con iconografia nautica, gerarchia visiva chiara e percorsi di rientro guidati",
+    "Touch targets conformi agli standard ergonomici mobile (minimo 48x48px per controlli e pulsanti)",
+    "Finestra modale con sfondo oscurato semitrasparente e blur d'ambiente per focalizzare l'attenzione"
+  ],
+  "tests": [
+    {
+      "name": "Compilazione statica Next.js e typecheck TypeScript",
+      "passed": true,
+      "command": "npm run build",
+      "evidence": "audit/build_typecheck.md"
+    },
+    {
+      "name": "Verifica navigazione da tastiera, skip-link e drawer mobile",
+      "passed": true,
+      "command": "node scripts/run-audit-tests.mjs",
+      "evidence": "audit/navigazione.md"
+    },
+    {
+      "name": "Verifica modulo contatti, validazione RFC e honeypot",
+      "passed": true,
+      "command": "node scripts/run-audit-tests.mjs",
+      "evidence": "audit/form_validazione.md"
+    },
+    {
+      "name": "Verifica responsive layout da 320px a 4K con clamp()",
+      "passed": true,
+      "command": "node scripts/run-audit-tests.mjs",
+      "evidence": "audit/responsive_layout.md"
+    },
+    {
+      "name": "Verifica WCAG 2.1 AA, contrasti, zero SVG e zero emoji",
+      "passed": true,
+      "command": "node scripts/run-audit-tests.mjs",
+      "evidence": "audit/accessibilita_wcag.md"
+    },
+    {
+      "name": "Verifica metadati SEO, Schema.org, sitemap e robots",
+      "passed": true,
+      "command": "node scripts/run-audit-tests.mjs",
+      "evidence": "audit/seo_metadata.md"
+    },
+    {
+      "name": "Audit dipendenze npm e vulnerabilita di sicurezza",
+      "passed": true,
+      "command": "npm audit --audit-level=high",
+      "evidence": "audit/dipendenze_sicurezza.md"
+    },
+    {
+      "name": "Scansione statica vulnerabilita XSS, injection e CSP",
+      "passed": true,
+      "command": "node scripts/run-audit-tests.mjs",
+      "evidence": "audit/xss_injection.md"
+    },
+    {
+      "name": "Audit igiene repository, assenza credenziali e .gitignore",
+      "passed": true,
+      "command": "node scripts/run-audit-tests.mjs",
+      "evidence": "audit/gestione_segreti.md"
+    },
+    {
+      "name": "Analisi peso risorse raster, bundle JS e consumo memoria",
+      "passed": true,
+      "command": "node scripts/run-audit-tests.mjs",
+      "evidence": "audit/performance_memoria.md"
+    },
+    {
+      "name": "Confronto strutturale con goreela.it e motivazione omissioni",
+      "passed": true,
+      "command": "node scripts/run-audit-tests.mjs",
+      "evidence": "audit/confronto_goreela.md"
+    }
+  ],
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "e00f0f16f61490ec4317da733614dedf0f1b405586224c1ad99f9cfb891e9183"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "ca54f9deacd49ed6933ee02c7d118dd5305da278c08b2f51a4a9c2bed089ab2d"
+    },
+    {
+      "path": "audit/accessibilita_wcag.md",
+      "sha256": "753a484d4e4e0fde92d3d78111a52f682cca1ddc55fb22611d7448c4c6810161"
+    },
+    {
+      "path": "audit/build_typecheck.md",
+      "sha256": "f7539dba869a346f60ae9fc9f2ba14c65f6a48d0b4bd0b83df18c36adff5245a"
+    },
+    {
+      "path": "audit/confronto_goreela.md",
+      "sha256": "5a4e7b5e84fba20ec22ed4d0055db155d765ba656e498626238c2b0471432b7d"
+    },
+    {
+      "path": "audit/dipendenze_sicurezza.md",
+      "sha256": "6ba771443a109982650c11d40c12dd90e38e8c2bcb19b171da18784b1c7c7f52"
+    },
+    {
+      "path": "audit/form_validazione.md",
+      "sha256": "2e698676432760ad17070880384a97071bea4cce2e11693fccfd11f2e14096d6"
+    },
+    {
+      "path": "audit/gestione_segreti.md",
+      "sha256": "e37a9f6582fdaf59b1c03a70fac3675564a9c651660f071f0b5c1fd699a53bd4"
+    },
+    {
+      "path": "audit/navigazione.md",
+      "sha256": "01640d4ccdde6bf2ea461f9e84330b5762066d261f27585c6dd979c3adea1b49"
+    },
+    {
+      "path": "audit/performance_memoria.md",
+      "sha256": "3e896a4304bcc0fc663b16a32ddd0371dc9559aeda7ad0be7a1a5fb444ffc341"
+    },
+    {
+      "path": "audit/responsive_layout.md",
+      "sha256": "56d55c192eae49ea8b2133868cc96cf78ee53185ec16ca1708c461e9b3363d0a"
+    },
+    {
+      "path": "audit/seo_metadata.md",
+      "sha256": "96795918fb7c2167f15d58fe58c6e0bf2e2f3559170d0b6e4e7fe6958991a9a2"
+    },
+    {
+      "path": "audit/xss_injection.md",
+      "sha256": "11d8da1d00adde24017c16b994686d5f33eb774610f483055897b19141d5f740"
+    },
+    {
+      "path": "BRIEF.json",
+      "sha256": "10cec643a647b6ad0e9da5c26c6dd1f2c84661caca844bff56c076e3d296f06b"
+    },
+    {
+      "path": "JARVIS_SPEC.md",
+      "sha256": "73cb65eba2181a5c96e41be398684df03740edf77dd129e9b4d7e2a80c6318cb"
+    },
+    {
+      "path": "next-env.d.ts",
+      "sha256": "85ae5aee75f011967cf2d25cbc342f62d69314e9d925f7f4aa3456fc2cffcca6"
+    },
+    {
+      "path": "next.config.mjs",
+      "sha256": "4ba8e847006184b416c52dec413669e916f475d4d10da3865bba4da84b3731b5"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "aef7d4711f3cea1487d9618264c7f9cf9ed5ea71ee337ed193a06a64ebcacd13"
+    },
+    {
+      "path": "package.json",
+      "sha256": "60515aee0c0c607423c56d888f8b84f341e23b0a1a26097308f8839133d15da0"
+    },
+    {
+      "path": "public/favicon.ico",
+      "sha256": "1f03b6045c5f31e3585a0a7afd3bf76f61e826415fd28a91a68516795a835d2e"
+    },
+    {
+      "path": "public/favicon.png",
+      "sha256": "1f03b6045c5f31e3585a0a7afd3bf76f61e826415fd28a91a68516795a835d2e"
+    },
+    {
+      "path": "public/fonts/bootstrap-icons.woff",
+      "sha256": "24929e8a44da027588f833d4e82240ee734bd65bf962b08b0545af58a9ce80fa"
+    },
+    {
+      "path": "public/fonts/bootstrap-icons.woff2",
+      "sha256": "2b7689746f87e0beeae25338bc021dd2515c2f6f003f3d3d064d878d380b2150"
+    },
+    {
+      "path": "public/images/cagliari-marina.png",
+      "sha256": "0ca9fbab44eadf44430962bcf02aeadd5b85a7dd5cab8e04afc7440588e3e769"
+    },
+    {
+      "path": "public/images/colazione-sarda.png",
+      "sha256": "3cbbcac84cbb2577d14bcc0c234368ffe78f85052f41e2de472c40712e551e5b"
+    },
+    {
+      "path": "public/images/hero-hotel-italia.png",
+      "sha256": "9d46c9200c30ab67f4e7c81fc0452798d11869d0730201733f129a662bbcc09b"
+    },
+    {
+      "path": "public/images/og-hotel-italia.png",
+      "sha256": "111743796adb64bc48c290647998a2a872adc95cf489c2881ffbdca577789f79"
+    },
+    {
+      "path": "public/images/partner-fondo-resisto.png",
+      "sha256": "f2da967a4a6a46c2bd7f07b9217d6888022be1b33b0ca038eaa80246050800da"
+    },
+    {
+      "path": "public/images/partner-pnrr.png",
+      "sha256": "577fc20853ca8132e181acbfba5a7c816f61b674802d7583ef10fa97ffa4cfa0"
+    },
+    {
+      "path": "public/images/partner-regione-sardegna.png",
+      "sha256": "6654e67f67b8b9776e6de60cc7c5d7366482ff6ff18123ad9143294ccdaf424b"
+    },
+    {
+      "path": "public/images/partner-traghetti-lines.png",
+      "sha256": "37721b5f884c59c4f1fdfa32ba2aa1751bc981f8277e8a20df61f9f5c4713983"
+    },
+    {
+      "path": "public/images/partner-unione-europea.png",
+      "sha256": "cef91f44cf9d88b7e0a5585682611fcca9200633afb4d4387565bc4b2652fbac"
+    },
+    {
+      "path": "public/images/room-comfort.png",
+      "sha256": "6504dbed87a2ec5e27bd1bb62a3e3d3ed70977a09db7901a711c97497aff7256"
+    },
+    {
+      "path": "public/images/room-deluxe.png",
+      "sha256": "9a1e6aae406a0b3f6ea07999330d1232231612187f59a038dacfbd34c3115573"
+    },
+    {
+      "path": "public/images/room-family.png",
+      "sha256": "ab1690583b73eb28f6050bc9af827b88586bdc75e2b82863980a047ee42c8c6a"
+    },
+    {
+      "path": "public/images/room-suite.png",
+      "sha256": "00a47d92ccba5c7652df772f7c6922894962f751078fadf98fb9a2a6addacda3"
+    },
+    {
+      "path": "public/images/team-concierge.png",
+      "sha256": "1fd9faff3c7a05245b9b33c656367207cab4bc9b7aec566f3eac697d11739b38"
+    },
+    {
+      "path": "public/images/team-direzione.png",
+      "sha256": "09639beb9fe7122b84f7c66f40ddc216f050d68ac62f972754053bcd2bc64b83"
+    },
+    {
+      "path": "public/images/team-housekeeping.png",
+      "sha256": "b187c70a0ebcb9f6e089e282be150434230c010fe351d1dd1d7f4793ba31b48e"
+    },
+    {
+      "path": "public/images/team-reception.png",
+      "sha256": "17858ce947b32629c30c56d2446ba18d7f644d4f264484d85aa7a69580296f3b"
+    },
+    {
+      "path": "scripts/generate-assets.mjs",
+      "sha256": "90386c9ab6b5f0022cd9a8c8776d999bd28dbc285a33175d975818312b87a380"
+    },
+    {
+      "path": "scripts/generate-manifest.mjs",
+      "sha256": "952fc71e8362eee27b8978d36273fc0553922d650ad8ed98ed2e96963e6f2621"
+    },
+    {
+      "path": "scripts/run-audit-tests.mjs",
+      "sha256": "796ca59332e5e18e334324f9665b7fc1c9d5dbd2b4beffedfad91bd8d5bd205a"
+    },
+    {
+      "path": "src/app/accessibilita/page.tsx",
+      "sha256": "e5146c54cb61bdc27288ae5a3c1c57d30b4f1e15b01005404943d20e681bfa32"
+    },
+    {
+      "path": "src/app/cookie/page.tsx",
+      "sha256": "9d479ada650503b8bfba5c92d2f0cbda6a3cfb1ced52b5194fc1d98a8d15e306"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "sha256": "5029329636bb19825cc42187e72a0cc5e1ee22c6077919bb21317c5517073f07"
+    },
+    {
+      "path": "src/app/legal.module.css",
+      "sha256": "7c391446b0219de0e011a10f498cbfa1c2dca05f1e2cd8a0e5a136ac7e4b88f1"
+    },
+    {
+      "path": "src/app/not-found.module.css",
+      "sha256": "9c182a532638355049889dc4af63e762ea2ba5c502f9ac44f471820eca36957b"
+    },
+    {
+      "path": "src/app/not-found.tsx",
+      "sha256": "2d74aca7e4c38d81040dacaad53b780ba08e4e1428a0507072b438988f1daa6a"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "sha256": "6451450c07d7145477413081e410d703a23fdb4013d620aface09e9ff9e10e38"
+    },
+    {
+      "path": "src/app/privacy/page.tsx",
+      "sha256": "04e240f0bb7774ba572fe73cc9e41c601f9b75cd4313d4236034d30fd9256133"
+    },
+    {
+      "path": "src/app/robots.ts",
+      "sha256": "c1a72218c26c4b2ab338540c84d3c12c72e5548ad100ee7d813d817131cf0c65"
+    },
+    {
+      "path": "src/app/sitemap.ts",
+      "sha256": "59bacf9baa7f4e25bbcb9fdf6ec8050d6e69f2447d20149edb33bbd8d54ee956"
+    },
+    {
+      "path": "src/app/termini/page.tsx",
+      "sha256": "d3270ee8c294ae4685ccef0065d0107d54e347c0f9926f84e2aaa0eb21cafea3"
+    },
+    {
+      "path": "src/components/AccessibilityDialog.module.css",
+      "sha256": "459f159a7a141a4a53ac0f705768e7ecfafaa8a2e6d7674432dd83b75452fffe"
+    },
+    {
+      "path": "src/components/AccessibilityDialog.tsx",
+      "sha256": "dd97569ab5f9aeae3cef0208cbd152ea2360ebe35e252a56a5313646d87281d2"
+    },
+    {
+      "path": "src/components/BookingBar.module.css",
+      "sha256": "abfb44fe5150ddf0d263ad8e09d9dcce09814993778c50f0d5bbbca7151d6f67"
+    },
+    {
+      "path": "src/components/BookingBar.tsx",
+      "sha256": "bc5d52af9bd3b41f2142aae6a4370e58d1d35fc6cdff6bc7b671ac7f8647eb76"
+    },
+    {
+      "path": "src/components/ContactForm.module.css",
+      "sha256": "c3547e59b2b30c4d2c377e1b8f5b873e4baccdb71a719587c7e5aa1bf859c6b7"
+    },
+    {
+      "path": "src/components/ContactForm.tsx",
+      "sha256": "0cc4e85b5f77858107b1ba10f3f55ca3965e3a83f0d65db12eac9f47dc513d52"
+    },
+    {
+      "path": "src/components/CookieConsentBanner.module.css",
+      "sha256": "49757078a7c1f655f1de58c0e7920b2e782de57736d16f2a3883aa47286f8ddc"
+    },
+    {
+      "path": "src/components/CookieConsentBanner.tsx",
+      "sha256": "e950c1bf55d56ed3992b0a2bd924ca25e9c308f8bbb2d5e6544e3e3f8e82259e"
+    },
+    {
+      "path": "src/components/DemoNoticeBanner.module.css",
+      "sha256": "6d75a224798ff426a4f10ae28ac5dea2395f48bd6a7d396cc0306542d65b1c9c"
+    },
+    {
+      "path": "src/components/DemoNoticeBanner.tsx",
+      "sha256": "d316aa709143688b28087bc1f40793f736f1b57570728d91c6dc9b86a0125b81"
+    },
+    {
+      "path": "src/components/FaqAccordion.module.css",
+      "sha256": "42cd64b5cc355fbaa621390167bde3db05eb665acf57418a08c078f3a838bb54"
+    },
+    {
+      "path": "src/components/FaqAccordion.tsx",
+      "sha256": "87570a595ffda125d07c395009585911f788454811c69ad82f78b0074d2610ae"
+    },
+    {
+      "path": "src/components/Footer.module.css",
+      "sha256": "3a7bc4e1a714b4abecda8168ebec494783b110af24cd4ca76bc79924d8b71817"
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "sha256": "dc3e793c27eb78505d709a265fa889a31abc727552fa15fa065326611ba9d818"
+    },
+    {
+      "path": "src/components/GuestExperienceTimeline.module.css",
+      "sha256": "d845247ab552280f3223d9752de51c7d8fade7f04483658b306068515995b253"
+    },
+    {
+      "path": "src/components/GuestExperienceTimeline.tsx",
+      "sha256": "dc7888b18dd90931684d313400de6faeab26cea895a3dc0e1c65c56c4a6b7225"
+    },
+    {
+      "path": "src/components/Hero.module.css",
+      "sha256": "c88955c0c9782704a1deffeb7a09d5154a625f778a3cac4149086edf8da6bce1"
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "sha256": "d488c912d2550e118e0fe50fed89d3d2d127b3bccecac68584a5756cc155ddd0"
+    },
+    {
+      "path": "src/components/HistoryHeritage.module.css",
+      "sha256": "2aa3f91d016b24d4ed9c2417808c6905aa1b17e98cf57c340c4dafe6045b5788"
+    },
+    {
+      "path": "src/components/HistoryHeritage.tsx",
+      "sha256": "347dec2169216b75240ecdc16b87028e9d92cc14d09a0dc4692790f6b00e3275"
+    },
+    {
+      "path": "src/components/InstitutionalPartners.module.css",
+      "sha256": "91c2ba72ab86a3572b0b23f9a817c2eed7c9f2942caab52df6873ccf073f8d37"
+    },
+    {
+      "path": "src/components/InstitutionalPartners.tsx",
+      "sha256": "c563b4d35b3748fc4bf93d78073db9b78f8e4b61ecbee0b95332b3c2872726c6"
+    },
+    {
+      "path": "src/components/Navbar.module.css",
+      "sha256": "040cc5e973505f0f2ce17156f4243d21c1282a928ad58d26e8e1a3d60c7bec19"
+    },
+    {
+      "path": "src/components/Navbar.tsx",
+      "sha256": "1b530807dc4b12a4e17259df0b8c11bd3eeda17a84ada77d2347f11112799d3b"
+    },
+    {
+      "path": "src/components/RoomCatalog.module.css",
+      "sha256": "ae0ccb99e31e9acf5dd5b49088777e7cfc5e1ec86b68a85126a0453eeaeac993"
+    },
+    {
+      "path": "src/components/RoomCatalog.tsx",
+      "sha256": "2f55973bb88931f47925d2e14345db47573e2da650f34a53d1fa4e62514964c7"
+    },
+    {
+      "path": "src/components/RoomModal.module.css",
+      "sha256": "ebc36d289b1b8f23931c78f0c2282a3716eed29dd5cea00f06ead16b8fb65b24"
+    },
+    {
+      "path": "src/components/RoomModal.tsx",
+      "sha256": "ef2b74cd6deb440e1ab0a02ea317ac60feefa334d68e88f658409515d74076ef"
+    },
+    {
+      "path": "src/components/ServicesGrid.module.css",
+      "sha256": "7ed6dbc8ea39879a1cb821b7e4a63541a7f65937f1d9ca7520577620b62697fd"
+    },
+    {
+      "path": "src/components/ServicesGrid.tsx",
+      "sha256": "507f9307315a024d6467ce56b698a86214e188d0c7fe0926730b172a53c9148b"
+    },
+    {
+      "path": "src/components/StrategicDistances.module.css",
+      "sha256": "2fc96da39146b9fb27f39b1e0935630a89da981965934db2d9e42db0ea4320c1"
+    },
+    {
+      "path": "src/components/StrategicDistances.tsx",
+      "sha256": "764b0a5768c62a16a1047fefd03897f4d5f012a14dc7973d5a1c93e5f6217450"
+    },
+    {
+      "path": "src/components/VerifiedTeam.module.css",
+      "sha256": "4f1ac0cb02c475a758cd64a32591ae970c20fdeb84a50570a9a3af4064aa80d7"
+    },
+    {
+      "path": "src/components/VerifiedTeam.tsx",
+      "sha256": "8d472ce396a6343fb4ec99ae5b01f98081db3f0962adbdebb23e63084e515d8f"
+    },
+    {
+      "path": "src/data/hotelData.ts",
+      "sha256": "d78b7781a184db7f239e75a3fe6f35af7a8ff81f9d3569535132775471af89d1"
+    },
+    {
+      "path": "src/data/roomData.ts",
+      "sha256": "76385afd4d0c0beabf65aed6459d8ac00bfae26fd953a06ae5f133d520311062"
+    },
+    {
+      "path": "src/styles/globals.css",
+      "sha256": "8f5010a1e7bee44d76cbd714cfd793b34cd473cd526c050d8f7e34b560cdbbc5"
+    },
+    {
+      "path": "src/styles/tokens.css",
+      "sha256": "bc967cd2a023b31e9e9100a85ff80285318bfdb092d08aee3efb64b5050409b7"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "b2550a84fb50c462c38b7245c9755cdf1943bac210c19193a9c83ab08aadc78a"
+    }
+  ]
+}
